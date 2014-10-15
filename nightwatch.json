@@ -1,0 +1,86 @@
+{
+  "DOC" : "http://www.browserstack.com/automate/capabilities",
+  "src_folders" : ["test/start"],
+  
+  "selenium" : {
+	"start_process" : false,
+	"server_path" : "/GIT/devops/utils/selenium/selenium-server-standalone-2.42.2.jar",
+	"log_path" : "",
+	"host" : "127.0.0.1",
+	"port" : 4433,
+	"cli_args" : {
+	  "webdriver.chrome.driver" : "",
+	  "webdriver.ie.driver" : "",
+	  "webdriver.firefox.profile" : ""
+	}
+  },
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 8080,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities" : {
+        "browserName" : "firefox",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+      }
+    },
+   	"phantomjs" : {
+	 	"screenshots" : {
+			"enabled" : true,
+			"path" : "report/nightwatch/screenshots"
+	  },
+      "desiredCapabilities" : {
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,
+        "phantomjs.binary.path" : "/GIT/devops/utils/phantomjs/lib/phantom/phantomjs.exe"
+      }
+    },
+	"android" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "report/nightwatch/screenshots"
+      },
+      "desiredCapabilities": {
+        "browserName": "android",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "kjelle1",
+        "browserstack.key": "Du4L6TtTugtNbFuqYyNb",
+		"browserstack.debug": true
+      }
+    },
+	"windows" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "report/nightwatch/screenshots"
+      },
+      "desiredCapabilities": {
+	    "os" : "Windows",
+	    "os_version" : "7",
+	    "browser" : "internet explorer", 
+	    "browser_version": "10",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "kjelle1",
+        "browserstack.key": "Du4L6TtTugtNbFuqYyNb",
+		"browserstack.debug": true
+      }
+    }
+  }
+}

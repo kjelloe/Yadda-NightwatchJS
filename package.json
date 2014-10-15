@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "nightwatch": "^0.5.18",
+    "utils": "^0.1.4",
+    "yadda": "^0.10.0"
+  }
+}
